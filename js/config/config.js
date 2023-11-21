@@ -4,7 +4,7 @@ import {
 
 //token api
 export function getTokenFromAPI() {
-    const tokenUrl = "https://asia-southeast2-lofty-mark-401904.cloudfunctions.net/loginpakarbi";
+    const tokenUrl = "https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotourlogin";
     fetch(tokenUrl)
         .then(response => response.json())
         .then(tokenData => {
@@ -20,13 +20,11 @@ export function getTokenFromAPI() {
 export function GetDataForm() {
     const username = document.querySelector("#username").value;
     const password = document.querySelector("#password").value;
-    const role = document.querySelector("#role").value;
     console.log(password)
 
     const data = {
         username: username,
         password: password,
-        role: role
     };
     return data
 }
@@ -35,12 +33,10 @@ export function GetDataForm() {
 export function PostLogin() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    const role = document.getElementById("role").value;
 
     const data = {
         username: username,
         password: password,
-        role: role
     };
     return data;
 }
@@ -48,7 +44,7 @@ export function PostLogin() {
 // alert post 
 export function AlertPost(value) {
     alert(value.message + "\nRegistrasi Berhasil")
-    window.location.href = "login.html"
+    window.location.href = "index.html"
 }
 
 // response post login
@@ -56,7 +52,7 @@ function ResponsePostLogin(response) {
     if (response && response.token) {
         console.log('Token User:', response.token);
         setCookieWithExpireHour('user_token', response.token, 2);
-        window.location.href = 'https://pakarbi.vaidiq.cloud/pages/dashboard.html';
+        window.location.href = 'https://wegotour.my.id/dashboarduser.html';
         alert("Selamat Datang")
     } else {
         alert('Login gagal. Silakan coba lagi.');
