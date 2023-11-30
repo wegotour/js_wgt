@@ -2,7 +2,7 @@ import {
     setCookieWithExpireHour
 } from 'https://jscroot.github.io/cookie/croot.js';
 
-//token api
+//token API
 export function getTokenFromAPI() {
     const tokenUrl = "https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotourloginadmin";
     fetch(tokenUrl)
