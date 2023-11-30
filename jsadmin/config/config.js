@@ -31,7 +31,7 @@ export function GetDataForm() {
     return data
 }
 
-// post logi
+// post login
 export function PostLogin() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
