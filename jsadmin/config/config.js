@@ -45,28 +45,18 @@ export function PostLogin() {
     return data;
 }
 
-// alert post 
-export function AlertPost(value) {
-    alert(value.message + "\nRegistrasi Berhasil")
-    window.location.href = "index.html"
-}
-
 // response post login
 function ResponsePostLogin(response) {
     if (response && response.token) {
         console.log('Token User:', response.token);
         setCookieWithExpireHour('user_token', response.token, 2);
-        window.location.href = 'https://wegotour.my.id/dashboardadmin.html';
-        alert("Selamat Datang")
+        window.location.href = 'https://wegotour.my.id/dashboardadmin/';
+        alert("Selamat Datang Di Website Kami!")
     } else {
         alert('Login gagal. Silakan coba lagi.');
     }
 }
 
-
-export function ResponsePost(result) {
-    AlertPost(result);
-}
 export function ResponseLogin(result) {
     ResponsePostLogin(result)
 }
