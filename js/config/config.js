@@ -51,6 +51,12 @@ export function AlertPost(value) {
     window.location.href = "index.html"
 }
 
+// alert update
+export function AlertUpdate(value) {
+    alert(value.message + "\nUpdate Berhasil")
+    window.location.href = "index.html"
+}
+
 // response post login
 function ResponsePostLogin(response) {
     if (response && response.token) {
@@ -67,6 +73,11 @@ function ResponsePostLogin(response) {
 export function ResponsePost(result) {
     AlertPost(result);
 }
+
+export function ResponseUpdate(result) {
+    AlertUpdate(result);
+}
+
 export function ResponseLogin(result) {
     ResponsePostLogin(result)
 }
