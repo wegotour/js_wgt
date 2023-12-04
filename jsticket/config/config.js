@@ -18,18 +18,16 @@ export function getTokenFromAPI() {
 
 //get data for update 
 export function GetDataForm() {
-    const nomorid = document.querySelector("#nomorid").value;
-    const title = document.querySelector("#title").value;
-    const description = document.querySelector("#description").value;
-    const image = document.querySelector("#image").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const role = document.querySelector("#role").value;
 
     const data = {
-        nomorid: nomorid,
-        title: title,
-        description: description,
-        image: image
+        email: email,
+        password: password,
+        role: role
     };
-    return data
+    return data;
 }
 
 // post ticket
