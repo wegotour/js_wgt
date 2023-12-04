@@ -4,7 +4,7 @@ import {
 
 //token API
 export function getTokenFromAPI() {
-    const tokenUrl = "https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotourloginadmin";
+    const tokenUrl = "https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotourloginadminbaru";
     fetch(tokenUrl)
         .then(response => response.json())
         .then(tokenData => {
@@ -16,29 +16,29 @@ export function getTokenFromAPI() {
         .catch(error => console.error('Gagal mengambil token:', error));
 }
 
-//get dataform
-export function GetDataForm() {
-    const username = document.querySelector("#username").value;
-    const password = document.querySelector("#password").value;
-    const role = document.querySelector("#role").value;
-    console.log(password)
+// //get dataform
+// export function GetDataForm() {
+//     const username = document.querySelector("#username").value;
+//     const password = document.querySelector("#password").value;
+//     const role = document.querySelector("#role").value;
+//     console.log(password)
 
-    const data = {
-        username: username,
-        password: password,
-        role: role
-    };
-    return data
-}
+//     const data = {
+//         username: username,
+//         password: password,
+//         role: role
+//     };
+//     return data
+// }
 
 // post login
 export function PostLogin() {
-    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const role = document.querySelector("#role").value;
 
     const data = {
-        username: username,
+        email: email,
         password: password,
         role: role
     };
