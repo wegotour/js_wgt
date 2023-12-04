@@ -4,7 +4,7 @@ import {
 
 //token api
 export function getTokenFromAPI() {
-    const tokenUrl = "https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotourloginadminbaru";
+    const tokenUrl = "https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdataticket";
     fetch(tokenUrl)
         .then(response => response.json())
         .then(tokenData => {
@@ -16,21 +16,21 @@ export function getTokenFromAPI() {
         .catch(error => console.error('Gagal mengambil token:', error));
 }
 
-//get data 
-// export function GetDataForm() {
-//     const nomorid = document.querySelector("#nomorid").value;
-//     const title = document.querySelector("#title").value;
-//     const description = document.querySelector("#description").value;
-//     const image = document.querySelector("#image").value;
+//get data for update 
+export function GetDataForm() {
+    const nomorid = document.querySelector("#nomorid").value;
+    const title = document.querySelector("#title").value;
+    const description = document.querySelector("#description").value;
+    const image = document.querySelector("#image").value;
 
-//     const data = {
-//         nomorid: nomorid,
-//         title: title,
-//         description: description,
-//         image: image
-//     };
-//     return data
-// }
+    const data = {
+        nomorid: nomorid,
+        title: title,
+        description: description,
+        image: image
+    };
+    return data
+}
 
 // post ticket
 export function PostTicket() {
@@ -54,6 +54,12 @@ export function AlertPost(value) {
     window.location.href = "elements.html"
 }
 
+// alert update
+export function AlertUpdateTicket(value) {
+    alert(value.message + "\nUpdate Berhasil")
+    window.location.href = "index.html"
+}
+
 // response post ticket
 function ResponseTicket(response) {
     if (response && response.token) {
@@ -71,6 +77,6 @@ export function ResponseTicket(result) {
     AlertPost(result);
 }
 
-// export function ResponseLogin(result) {
-//     ResponsePostLogin(result)
-// }
+export function ResponseUpdateTicket(result) {
+    AlertUpdateTicket(result);
+}
