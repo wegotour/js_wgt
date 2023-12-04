@@ -50,7 +50,7 @@ function ResponsePostLogin(response) {
     if (response && response.token) {
         console.log('Token User:', response.token);
         setCookieWithExpireHour('user_token', response.token, 2);
-        window.location.href = 'https://wegotour.my.id/dashboardadmin/';
+        window.location.href = 'https://wegotour.my.id/dashboard/';
         alert("Selamat Datang Di Website Kami!")
     } else {
         alert('Login gagal. Silakan coba lagi.');
