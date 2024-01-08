@@ -63,10 +63,18 @@ function ResponsePostLogin(response) {
         console.log('Token User:', response.token);
         setCookieWithExpireHour('user_token', response.token, 2);
         window.location.href = 'https://wegotour.my.id/dashboard/';
-        alert("Selamat Datang")
-    } else {
-        alert('Login gagal. Silakan coba lagi.');
-    }
+        Swal.fire({
+            icon: 'success',
+            title: 'Login Successful',
+            text: 'You have successfully logged in!',
+          });
+} else {
+  Swal.fire({
+            icon: 'error',
+            title: 'Login Failed',
+            text: 'Invalid email or password. Please try again.',
+          });
+}
 }
 
 
