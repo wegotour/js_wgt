@@ -10,7 +10,7 @@ const getTokenFromCookies = (cookieName) => {
   };
   
   const getAllTicket = async () => {
-    const token = getTokenFromCookies('Login');
+    const token = getTokenFromCookies('user_token');
   
     if (!token) {
       Swal.fire({
@@ -26,7 +26,7 @@ const getTokenFromCookies = (cookieName) => {
     const targetURL = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/getallticket';
   
     const myHeaders = new Headers();
-    myHeaders.append('Login', token);
+    myHeaders.append('user_token', token);
   
     const requestOptions = {
       method: 'GET',
