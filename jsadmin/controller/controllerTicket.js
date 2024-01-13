@@ -23,7 +23,7 @@ const getTokenFromCookies = (cookieName) => {
       return
     }
   
-    const URLGetAllTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/getallticket'
+    const URLGetAllTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotour'
   
     const myHeaders = new Headers()
     myHeaders.append('user_token', token)
