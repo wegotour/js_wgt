@@ -7,7 +7,7 @@ function logout() {
 
     alert("Apakah anda yakin ingin keluar?");
 
-    deleteCookie('user_token');
+    deleteCookie('Login');
     window.location.href = 'https://wegotour.my.id';
 }
 

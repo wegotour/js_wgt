@@ -61,7 +61,7 @@ export function AlertUpdate(value) {
 function ResponsePostLogin(response) {
     if (response && response.token) {
         console.log('Token User:', response.token);
-        setCookieWithExpireHour('user_token', response.token, 2);
+        setCookieWithExpireHour('Login', response.token, 2);
         window.location.href = 'https://wegotour.my.id/dashboard/';
         Swal.fire({
             icon: 'success',

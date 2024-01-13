@@ -21,7 +21,7 @@ const getTokenFromCookies = (cookieName) => {
   }
   
   const searchnomorById = async (nomorId) => {
-    const token = getTokenFromCookies('user_token')
+    const token = getTokenFromCookies('Login')
   
     if (!token) {
       showUpdateAlert('Anda Belum Login', 'error')
@@ -31,7 +31,7 @@ const getTokenFromCookies = (cookieName) => {
     const URLUpdateTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedataticket'
   
     const myHeaders = new Headers()
-    myHeaders.append('user_token', token)
+    myHeaders.append('Login', token)
   
     const requestOptions = {
       method: 'POST',
@@ -72,7 +72,7 @@ const getTokenFromCookies = (cookieName) => {
   const updateTicket = async (event) => {
     event.preventDefault()
   
-    const token = getTokenFromCookies('user_token')
+    const token = getTokenFromCookies('Login')
   
     if (!token) {
       showUpdateAlert('Anda Belum Login', 'error')
@@ -82,7 +82,7 @@ const getTokenFromCookies = (cookieName) => {
     const URLUpdateTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedataticket'
   
     const myHeaders = new Headers()
-    myHeaders.append('user_token', token)
+    myHeaders.append('Login', token)
     myHeaders.append('Content-Type', 'application/json')
   
     const statusValue = document.getElementById('StatusInput').value === 'active'

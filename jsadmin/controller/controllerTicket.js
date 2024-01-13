@@ -10,7 +10,7 @@ const getTokenFromCookies = (cookieName) => {
   }
   
   const getAllTicket = async () => {
-    const token = getTokenFromCookies('user_token')
+    const token = getTokenFromCookies('Login')
   
     if (!token) {
       Swal.fire({
@@ -26,7 +26,7 @@ const getTokenFromCookies = (cookieName) => {
     const URLGetAllTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotour'
   
     const myHeaders = new Headers()
-    myHeaders.append('user_token', token)
+    myHeaders.append('Login', token)
   
     const requestOptions = {
       method: 'GET',
@@ -53,7 +53,7 @@ const getTokenFromCookies = (cookieName) => {
   }
   
   const deleteTicket = async (nomorId) => {
-    const token = getTokenFromCookies('user_token')
+    const token = getTokenFromCookies('Login')
   
     if (!token) {
       showAlert('Header Login Not Found', 'error')
@@ -63,7 +63,7 @@ const getTokenFromCookies = (cookieName) => {
     const URLDeleteTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/deletedataticket'
   
     const myHeaders = new Headers()
-    myHeaders.append('user_token', token)
+    myHeaders.append('Login', token)
     myHeaders.append('Content-Type', 'application/json')
   
     const requestOptions = {
