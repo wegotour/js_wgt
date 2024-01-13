@@ -38,7 +38,7 @@ const getTokenFromCookies = (cookieName) => {
       const response = await fetch(URLGetAllTicket, requestOptions)
       const data = await response.json()
   
-      if (data.status === 200) {
+      if (data.status) {
         displayTicketData(data.data, 'TicketDataBody')
       } else {
         Swal.fire({
@@ -77,7 +77,7 @@ const getTokenFromCookies = (cookieName) => {
       const response = await fetch(URLDeleteTicket, requestOptions)
       const data = await response.json()
   
-      if (data.status === 200) {
+      if (data.status) {
         Swal.fire({
           icon: 'success',
           title: 'Success',
