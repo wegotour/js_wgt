@@ -28,7 +28,7 @@ const getTokenFromCookies = (cookieName) => {
       return
     }
   
-    const targetURL = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedataticket'
+    const URLUpdateTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedataticket'
   
     const myHeaders = new Headers()
     myHeaders.append('user_token', token)
@@ -41,7 +41,7 @@ const getTokenFromCookies = (cookieName) => {
     }
   
     try {
-      const response = await fetch(targetURL, requestOptions)
+      const response = await fetch(URLUpdateTicket, requestOptions)
       const data = await response.json()
   
       if (response.ok) {
@@ -79,7 +79,7 @@ const getTokenFromCookies = (cookieName) => {
       return
     }
   
-    const targetURL = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedataticket'
+    const URLUpdateTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/updatedataticket'
   
     const myHeaders = new Headers()
     myHeaders.append('user_token', token)
@@ -102,7 +102,7 @@ const getTokenFromCookies = (cookieName) => {
     }
   
     try {
-      const response = await fetch(targetURL, requestOptions)
+      const response = await fetch(URLUpdateTicket, requestOptions)
       const data = await response.json()
   
       if (response.ok) {

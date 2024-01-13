@@ -23,7 +23,7 @@ const getTokenFromCookies = (cookieName) => {
       return
     }
   
-    const targetURL = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/getallticket'
+    const URLGetAllTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/getallticket'
   
     const myHeaders = new Headers()
     myHeaders.append('user_token', token)
@@ -35,7 +35,7 @@ const getTokenFromCookies = (cookieName) => {
     }
   
     try {
-      const response = await fetch(targetURL, requestOptions)
+      const response = await fetch(URLGetAllTicket, requestOptions)
       const data = await response.json()
   
       if (data.status === 200) {
@@ -60,7 +60,7 @@ const getTokenFromCookies = (cookieName) => {
       return
     }
   
-    const targetURL = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/deletedataticket'
+    const URLDeleteTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/deletedataticket'
   
     const myHeaders = new Headers()
     myHeaders.append('user_token', token)
@@ -74,7 +74,7 @@ const getTokenFromCookies = (cookieName) => {
     }
   
     try {
-      const response = await fetch(targetURL, requestOptions)
+      const response = await fetch(URLDeleteTicket, requestOptions)
       const data = await response.json()
   
       if (data.status === 200) {

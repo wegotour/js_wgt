@@ -21,17 +21,17 @@ const getTokenFromCookies = (cookieName) => {
   const insertTicket = async (event) => {
     event.preventDefault()
   
-    const token = getTokenFromCookies('user_token')
+    const token = getTokenFromCookies('Login')
   
     if (!token) {
-      showAlert('Header user_token Not Found', 'error')
+      showAlert('Header Login Not Found', 'error')
       return
     }
   
-    const targetURL = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdataticket'
+    const URLInsertTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdataticket'
   
     const myHeaders = new Headers()
-    myHeaders.append('user_token', token)
+    myHeaders.append('Login', token)
     myHeaders.append('Content-Type', 'application/json')
   
     const requestOptions = {
@@ -49,7 +49,7 @@ const getTokenFromCookies = (cookieName) => {
     }
   
     try {
-      const response = await fetch(targetURL, requestOptions)
+      const response = await fetch(URLInsertTicket, requestOptions)
       const data = await response.json()
   
       if (data.status === false) {
