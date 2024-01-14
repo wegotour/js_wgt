@@ -141,6 +141,7 @@ const getTokenFromCookies = (cookieName) => {
           <td class="px-4 py-3">${item.nomorid}</td>
           <td class="px-4 py-3">${item.title}</td>
           <td class="px-4 py-3">${item.description}</td>
+          <td class="px-4 py-3">${item.lokasi}</td>
           <td class="px-4 py-3">
             <img src="${item.image}" alt="Ticket Image" style="max-width: 100px; max-height: 100px;">
           </td>
