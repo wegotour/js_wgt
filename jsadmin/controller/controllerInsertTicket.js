@@ -37,7 +37,7 @@ const getTokenFromCookies = (cookieName) => {
     const requestOptions = {
       method: 'POST',
       headers: myHeaders,
-      body: JSON.stringify({
+      body: JSON.stringify({  
         nomorid: parseInt(document.getElementById('newNomorID').value),
         title: document.getElementById('newTitle').value,
         description: document.getElementById('newDeskripsi').value,
