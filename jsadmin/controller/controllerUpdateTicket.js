@@ -94,7 +94,6 @@ const getTokenFromCookies = (cookieName) => {
         nomorid: parseInt(document.getElementById('NomorIdInput').value),
         title: document.getElementById('TitleInput').value,
         description: document.getElementById('DeskripsiInput').value,
-        lokasi: document.getElementById('LokasiInput').value,
         image: document.getElementById('ImageInput').value,
         status: statusValue,
       }),
