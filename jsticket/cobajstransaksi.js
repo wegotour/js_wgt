@@ -1,5 +1,6 @@
 import { postWithBearer } from "https://jscroot.github.io/api/croot.js";
 
+export let URLTicket = `https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertticket`
 export let URLPost = `https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdatatransaksi`
 export let token = 'token';
 
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
          // Display loading overlay
         showLoadingOverlay();
         let data = GetDataForm();
-        postWithBearer(URLPost, token, data, ResponsePost)
+        postWithBearer(URLTicket, URLPost, token, data, ResponsePost)
     });
 });
 
