@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
          // Display loading overlay
         showLoadingOverlay();
         let data = GetDataForm();
-        postWithBearer(URLTicket, URLPost, token, data, ResponsePost)
+        postWithBearer(URLPost, token, data, ResponsePost)
     });
 });
 
