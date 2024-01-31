@@ -16,20 +16,20 @@ export function getTokenFromAPI() {
         .catch(error => console.error('Gagal mengambil token:', error));
 }
 
-// //get data 
-// export function GetDataForm() {
-//     const username = document.querySelector("#username").value;
-//     const password = document.querySelector("#password").value;
-//     const role = document.querySelector("#role").value;
-//     console.log(password)
+//get & post data 
+export function GetDataForm() {
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
+    const role = document.querySelector("#role").value;
+    console.log(password)
 
-//     const data = {
-//         username: username,
-//         password: password,
-//         role: role
-//     };
-//     return data
-// }
+    const data = {
+        email: email,
+        password: password,
+        role: role
+    };
+    return data
+}
 
 // post login
 export function PostLogin() {
@@ -50,7 +50,7 @@ export function AlertPost(value) {
     alert(value.message + "\nRegistrasi Berhasil")
     setTimeout(() => {
         window.location.href = "https://wegotour.my.id"
-    }, 3000); // 2000 milliseconds = 2 seconds
+    }, 3000); // 3000 milliseconds = 3 seconds
 }
 
 // // alert update
