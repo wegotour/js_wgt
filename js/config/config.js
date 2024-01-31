@@ -48,7 +48,7 @@ export function PostLogin() {
 // alert post 
 export function AlertPost(value) {
     alert(value.message + "\nRegistrasi Berhasil")
-    window.location.href = "https://wegotour.my.id/"
+    // window.location.href = "index.html"
 }
 
 // // alert update
