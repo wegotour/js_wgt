@@ -1,7 +1,6 @@
 import { postWithBearer } from "https://jscroot.github.io/api/croot.js";
 
-export let URLTicket = `https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertticket`
-export let URLPost = `https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdatatransaksi`
+export let URLPost = `https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdataticket`
 export let token = 'token';
 
 
@@ -18,25 +17,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
     export function GetDataForm(){
-        const namaticket = document.querySelector("#ticketName").value;
-        const harga = document.querySelector("#ticketPrice").value;
-        const quantity = document.querySelector("#ticketQuantity").value;
-        const total = document.querySelector("#ticketTotal").value;
-        const namapembeli = document.querySelector("#namapembeli").value;
-        const email = document.querySelector("#email").value;
-        const alamat = document.querySelector("#alamat").value;
-        const nohp = document.querySelector("#nohp").value;
+        const nomorid = document.querySelector("#nomorid").value;
+        const title = document.querySelector("#title").value;
+        const description = document.querySelector("#description").value;
+        const image = document.querySelector("#image").value;
+        const status = document.querySelector("#status").value;
         console.log(namapembeli)
     
         const data = {
-            namaticket: namaticket,
-            harga: harga,
-            quantity: quantity,
-            total : total,
-            namapembeli : namapembeli,
-            email : email,
-            alamat : alamat,
-            nohp : nohp,
+          nomorid: nomorid,
+          title: title,
+          description: description,
+          image : image,
+          status : status,
         };
         return data
     }
