@@ -48,7 +48,9 @@ export function PostLogin() {
 // alert post 
 export function AlertPost(value) {
     alert(value.message + "\nRegistrasi Berhasil")
-    window.location.href = "index.html"
+    setTimeout(() => {
+        window.location.href = "https://wegotour.my.id"
+    }, 3000); // 2000 milliseconds = 2 seconds
 }
 
 // // alert update
