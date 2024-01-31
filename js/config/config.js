@@ -33,12 +33,12 @@ export function getTokenFromAPI() {
 
 // post login
 export function PostLogin() {
-    const username = document.getElementById("email").value;
+    const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const role = document.getElementById("role").value;
 
     const data = {
-        username: username,
+        email: email,
         password: password,
         role: role
     };
