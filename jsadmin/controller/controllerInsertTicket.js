@@ -28,7 +28,7 @@ const getTokenFromCookies = (cookieName) => {
       return
     }
   
-    const URLInsertTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdatatickets'
+    const URLInsertTicket = 'https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdataticket'
   
     const myHeaders = new Headers()
     myHeaders.append('Login', token)
