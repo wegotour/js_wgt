@@ -4,7 +4,7 @@ import {
 
 //token api
 export function getTokenFromAPI() {
-    const tokenUrl = "https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotourlogin";
+    const tokenUrl = "https://asia-southeast2-wegotour-403712.cloudfunctions.net/wegotourloginadminbaru";
     fetch(tokenUrl)
         .then(response => response.json())
         .then(tokenData => {
@@ -16,24 +16,24 @@ export function getTokenFromAPI() {
         .catch(error => console.error('Gagal mengambil token:', error));
 }
 
-//get data 
-export function GetDataForm() {
-    const username = document.querySelector("#username").value;
-    const password = document.querySelector("#password").value;
-    const role = document.querySelector("#role").value;
-    console.log(password)
+// //get data 
+// export function GetDataForm() {
+//     const username = document.querySelector("#username").value;
+//     const password = document.querySelector("#password").value;
+//     const role = document.querySelector("#role").value;
+//     console.log(password)
 
-    const data = {
-        username: username,
-        password: password,
-        role: role
-    };
-    return data
-}
+//     const data = {
+//         username: username,
+//         password: password,
+//         role: role
+//     };
+//     return data
+// }
 
 // post login
 export function PostLogin() {
-    const username = document.getElementById("username").value;
+    const username = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const role = document.getElementById("role").value;
 
@@ -48,14 +48,14 @@ export function PostLogin() {
 // alert post 
 export function AlertPost(value) {
     alert(value.message + "\nRegistrasi Berhasil")
-    window.location.href = "index.html"
+    window.location.href = "https://wegotour.my.id/"
 }
 
-// alert update
-export function AlertUpdate(value) {
-    alert(value.message + "\nUpdate Berhasil")
-    window.location.href = "index.html"
-}
+// // alert update
+// export function AlertUpdate(value) {
+//     alert(value.message + "\nUpdate Berhasil")
+//     window.location.href = "index.html"
+// }
 
 // response post login
 function ResponsePostLogin(response) {
@@ -82,9 +82,9 @@ export function ResponsePost(result) {
     AlertPost(result);
 }
 
-export function ResponseUpdate(result) {
-    AlertUpdate(result);
-}
+// export function ResponseUpdate(result) {
+//     AlertUpdate(result);
+// }
 
 export function ResponseLogin(result) {
     ResponsePostLogin(result)
