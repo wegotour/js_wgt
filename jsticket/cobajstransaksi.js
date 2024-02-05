@@ -1,6 +1,6 @@
 import { postWithBearer } from "https://jscroot.github.io/api/croot.js";
 
-export let URLPost = `https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdataticket`
+export let URLPost = `https://asia-southeast2-wegotour-403712.cloudfunctions.net/insertdatatransaksi`
 export let token = 'token';
 
 
@@ -17,19 +17,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
     export function GetDataForm(){
-        const nomorid = document.querySelector("#nomorid").value;
-        const title = document.querySelector("#title").value;
-        const description = document.querySelector("#description").value;
-        const image = document.querySelector("#image").value;
-        const status = document.querySelector("#status").value;
+        const namaticket = document.querySelector("#ticketName").value;
+        const harga = document.querySelector("#ticketPrice").value;
+        const quantity = document.querySelector("#ticketQuantity").value;
+        const total = document.querySelector("#ticketTotal").value;
+        const namapembeli = document.querySelector("#namapembeli").value;
+        const email = document.querySelector("#email").value;
+        const alamat = document.querySelector("#alamat").value;
+        const nohp = document.querySelector("#nohp").value;
         console.log(namapembeli)
     
         const data = {
-          nomorid: nomorid,
-          title: title,
-          description: description,
-          image : image,
-          status : status,
+            namaticket: namaticket,
+            harga: harga,
+            quantity: quantity,
+            total : total,
+            namapembeli : namapembeli,
+            email : email,
+            alamat : alamat,
+            nohp : nohp,
         };
         return data
     }
@@ -72,4 +78,3 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 2000); // Sesuaikan timeout dengan durasi animasi CSS
     }
   };
-
