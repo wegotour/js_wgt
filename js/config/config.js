@@ -49,7 +49,7 @@ export function PostLogin() {
 export function AlertPost(value) {
     alert(value.message + "\nRegistrasi Berhasil")
     setTimeout(() => {
-        window.location.href = "https://wegotour.my.id"
+        window.location.href = "https://wegotour.my.id/wegotour/loginuser.html"
     }, 3000); // 3000 milliseconds = 3 seconds
 }
 
