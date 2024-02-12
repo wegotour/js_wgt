@@ -50,7 +50,7 @@ function ResponsePostLogin(response) {
     if (response && response.token) {
         console.log('Token User:', response.token);
         setCookieWithExpireHour('Login', response.token, 2);
-        window.location.href = 'https://wegotour.my.id/dashboardadmin/';
+        window.location.href = 'https://wegotour.my.id/admin/index.html';
         Swal.fire({
             icon: 'success',
             title: 'Login Successful',
